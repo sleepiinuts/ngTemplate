@@ -1,0 +1,21 @@
+<ng-container #vcr [ngTemplateOutlet]="activeTemplate"> </ng-container>
+<ng-template #loading>
+  <p>loading...</p>
+</ng-template>
+<ng-template #tpl>
+  @for(item of items;track $index){
+  <div>
+    <h3>{{ "Item:$#" + item }}</h3>
+    <hr />
+    <p>
+      Lorem ipsum, dolor sit amet consectetur adipisicing elit. Perferendis
+      quaerat, provident hic non animi et, at, ut ab facere quas tempora
+      molestiae officia. Ut consequuntur voluptatum iusto illum ab dolorem.
+    </p>
+    <br />
+    <br />
+  </div>
+  }
+</ng-template>
+
+<button (click)="toggleLoading()">toggle</button>
