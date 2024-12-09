@@ -1,0 +1,8 @@
+<app-accordian title="truck" [items]="trucks">
+  <ng-template #template let-item let-idx="idx">
+    <div>
+      <mat-icon aria-hidden="false" fontIcon="emergency"></mat-icon>
+      <span>{{ idx }}:{{ item.name }}</span>
+    </div>
+  </ng-template>
+</app-accordian>
