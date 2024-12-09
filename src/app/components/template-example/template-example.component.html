@@ -1,3 +1,10 @@
+<button (click)="toggleLoading()">toggle</button>
+
+<app-placeholder
+  [animation]="'pulse'"
+  [theme]="{ 'background-color': 'black', width: '300px', height: '300px' }"
+></app-placeholder>
+
 <ng-container #vcr [ngTemplateOutlet]="activeTemplate"> </ng-container>
 <ng-template #loading>
   <p>loading...</p>
@@ -18,4 +25,9 @@
   }
 </ng-template>
 
-<button (click)="toggleLoading()">toggle</button>
+<hr />
+<h3>Accordian Playground</h3>
+<app-accordian
+  title="sample"
+  [items]="[{ name: 'test1' }, { name: 'test2' }]"
+></app-accordian>

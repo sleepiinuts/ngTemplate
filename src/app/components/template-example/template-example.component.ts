@@ -11,11 +11,19 @@ import {
   ViewContainerRef,
 } from '@angular/core';
 
+import { AccordianComponent } from '../accordian/accordian.component';
+import { PlaceholderComponent } from '../placeholder/placeholder.component';
+
 import { MatProgressSpinnerModule } from '@angular/material/progress-spinner';
 @Component({
   selector: 'app-template-example',
   standalone: true,
-  imports: [MatProgressSpinnerModule, CommonModule],
+  imports: [
+    MatProgressSpinnerModule,
+    CommonModule,
+    PlaceholderComponent,
+    AccordianComponent,
+  ],
   templateUrl: './template-example.component.html',
   styleUrl: './template-example.component.scss',
 })
