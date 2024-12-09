@@ -11,6 +11,7 @@ import {
   ViewContainerRef,
 } from '@angular/core';
 
+import { Accordian1Component } from '../accordian/accordian-1/accordian-1.component';
 import { AccordianComponent } from '../accordian/accordian.component';
 import { PlaceholderComponent } from '../placeholder/placeholder.component';
 
@@ -23,6 +24,7 @@ import { MatProgressSpinnerModule } from '@angular/material/progress-spinner';
     CommonModule,
     PlaceholderComponent,
     AccordianComponent,
+    Accordian1Component,
   ],
   templateUrl: './template-example.component.html',
   styleUrl: './template-example.component.scss',
