@@ -1,0 +1,6 @@
+<div class="accordian">
+  <div class="title">{{ title }}</div>
+  @for(item of items;track $index){
+  <li>{{ item?.name || "nothing" }}</li>
+  }
+</div>
