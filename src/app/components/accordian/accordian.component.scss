@@ -1,0 +1,17 @@
+.accordian {
+  width: 30%;
+  .title {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+
+    mat-icon {
+      transition: transform 2s cubic-bezier(0.165, 0.84, 0.44, 1);
+      &:hover {
+        cursor: pointer;
+        transform: scale(1.5);
+      }
+    }
+  }
+}

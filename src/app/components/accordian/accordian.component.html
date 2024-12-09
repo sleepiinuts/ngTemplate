@@ -1,6 +1,25 @@
 <div class="accordian">
-  <div class="title">{{ title }}</div>
-  @for(item of items;track $index){
-  <li>{{ item?.name || "nothing" }}</li>
-  }
+  <div class="title">
+    {{ title }}
+    <mat-icon
+      aria-hidden="false"
+      fontIcon="keyboard_arrow_down"
+      (click)="onToggleAccordian()"
+      [@rotate]="!toggleAccordian ? 'begin' : 'end'"
+    ></mat-icon>
+  </div>
+  <div
+    class="content"
+    [@openCloseContent]="!toggleAccordian ? 'close' : 'open'"
+  >
+    @for(item of items;track $index){
+    <ng-template #defaultTemplate>
+      <li>{{ item?.name || "unknown" }}</li>
+    </ng-template>
+    <ng-container
+      [ngTemplateOutlet]="tpl || defaultTemplate"
+      [ngTemplateOutletContext]="{ $implicit: item, idx: $index }"
+    ></ng-container>
+    }
+  </div>
 </div>
