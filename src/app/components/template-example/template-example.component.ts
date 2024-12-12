@@ -14,6 +14,7 @@ import {
 import { Accordian1Component } from '../accordian/accordian-1/accordian-1.component';
 import { AccordianComponent } from '../accordian/accordian.component';
 import { PlaceholderComponent } from '../placeholder/placeholder.component';
+import { StackingGridComponent } from '../stacking-grid/stacking-grid.component';
 
 import { MatProgressSpinnerModule } from '@angular/material/progress-spinner';
 @Component({
@@ -25,6 +26,7 @@ import { MatProgressSpinnerModule } from '@angular/material/progress-spinner';
     PlaceholderComponent,
     AccordianComponent,
     Accordian1Component,
+    StackingGridComponent,
   ],
   templateUrl: './template-example.component.html',
   styleUrl: './template-example.component.scss',

@@ -1,0 +1,17 @@
+<div class="col-container">
+  <div class="item active" #item_1>item1</div>
+  <div class="item" #item_1>item2</div>
+  <div class="item" #item_1>item3</div>
+  <nav>
+    <button mat-icon-button (click)="previous()" [disabled]="visible() === 0">
+      <mat-icon fontIcon="chevron_left"></mat-icon>
+    </button>
+    <button
+      mat-icon-button
+      (click)="next()"
+      [disabled]="visible() === countItem - 1"
+    >
+      <mat-icon fontIcon="chevron_right"></mat-icon>
+    </button>
+  </nav>
+</div>

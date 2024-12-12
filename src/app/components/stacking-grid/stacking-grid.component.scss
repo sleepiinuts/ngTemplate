@@ -1,0 +1,27 @@
+.col-container {
+  display: grid;
+
+  & .item {
+    grid-row: 1;
+    grid-column: 1;
+    width: 100px;
+    height: 100px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    transition: opacity 0.8s ease-in;
+
+    &:not(.active) {
+      opacity: 0;
+    }
+
+    &:nth-child(even) {
+      background-color: beige;
+    }
+    &:nth-child(odd) {
+      background-color: aquamarine;
+    }
+  }
+}
